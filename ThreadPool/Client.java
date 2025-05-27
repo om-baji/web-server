@@ -19,7 +19,7 @@ public class Client {
                     
                     try (
                         PrintWriter toSocket = new PrintWriter(socket.getOutputStream(),true);
-                    BufferedReader fromSocket = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                        BufferedReader fromSocket = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     ) {
                     
                         toSocket.println("Hello from client!");
