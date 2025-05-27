@@ -29,6 +29,7 @@ public class Server {
             System.out.println("Server listening on port " + port);
             while (true) {
                 Socket acceptedSocket = socket.accept();
+                System.out.println("Socket accepted " + acceptedSocket.getRemoteSocketAddress());
                 Thread thread = new Thread(() -> server.getConsumer().accept(acceptedSocket));
                 thread.start();
             }   

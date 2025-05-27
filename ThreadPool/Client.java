@@ -24,7 +24,6 @@ public class Client {
                     
                         toSocket.println("Hello from client!");
                         String line = fromSocket.readLine();
-
                         System.out.println("Received from server " + line);
                     } catch (IOException ex) {
                         ex.printStackTrace();
@@ -38,7 +37,7 @@ public class Client {
     public static void main(String[] args) {
         Client client = new Client();
         
-        for(int i = 0; i < 100; i++) {
+        for(int i = 0; i <= 10000; i++) {
             try {
                 Thread thread = new Thread(client.getRunnable(), "Client-" + i);;
                 thread.start();
